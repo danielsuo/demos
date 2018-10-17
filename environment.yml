@@ -1,0 +1,22 @@
+name: demos
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy
+  - scikit-learn
+  - ipython
+  - jupyter
+  - click
+  - tqdm
+  - requests
+  - matplotlib
+  - twine
+  - flake8
+  - mypy
+  - pytest
+  - wheel
+  - pip
+  - pip:
+    - clickutil
+
