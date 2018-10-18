@@ -21,4 +21,4 @@ dependencies:
   - pip
   - pip:
     - clickutil
-
+    - pollster
