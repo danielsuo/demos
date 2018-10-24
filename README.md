@@ -11,3 +11,4 @@
     - [For fellow geeks](http://election.princeton.edu/for-fellow-geeks)
     - [The Methods](http://election.princeton.edu/methods)
 - [538 replication](https://github.com/jseabold/538model)
+- [Blair](https://polistat.mbhs.edu/about/)
