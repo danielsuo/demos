@@ -1,5 +1,7 @@
 # demos
 
+This library will be necessarily messy as we suss out what might make for good APIs. In general, we're interested in APIs for data sources, modeling, predicting, validation, and visualization.
+
 ## Data sources
 - [electoral-vote.com](https://electoral-vote.com)
 - [Huffington Post Pollster](https://elections.huffingtonpost.com/pollster/api/v2)

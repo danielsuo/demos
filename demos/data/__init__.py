@@ -23,6 +23,9 @@ def run():
         "undecided", "Begdate", "Enddate", "Middate"
     ]
 
+    file = open("results.csv", "a")
+    file.write("{}\n".format(",".join(columns)))
+
     results = pd.DataFrame(columns=columns)
     polls_seen = set()
 
@@ -43,7 +46,8 @@ def run():
 
             # Grab all polls that contain this question
             while True:
-                polls = api.polls_get(question=question.slug, cursor=poll_cursor)
+                polls = api.polls_get(
+                    question=question.slug, cursor=poll_cursor)
 
                 if len(polls.items) == 0:
                     break
@@ -62,12 +66,17 @@ def run():
                     # Grab all questions in a given poll (yes, this is circular)
                     for poll_question in poll.poll_questions:
 
-                        print("    PollQuestion: {}".format(poll_question.question.slug))
+                        if poll_question.question is None or "TrumpvClinton" not in poll_question.question.slug:
+                            continue
+
+                        print("    PollQuestion: {}".format(
+                            poll_question.question.slug))
 
                         # TODO: look at examples where there's more than one subpopulation
                         pop = poll_question.sample_subpopulations[0]
 
-                        result = pd.DataFrame(None, index=[index], columns=columns)
+                        result = pd.DataFrame(
+                            None, index=[index], columns=columns)
                         result.state = poll_question.question.slug[3:5]
                         result.pollster = poll.survey_house
                         result.pop = pop.observations if pop.observations is not None else 1
@@ -97,12 +106,15 @@ def run():
 
                         result.other = 100 - result.clinton - result.trump - result.undecided
 
+                        result.to_csv(file, header=False)
                         results.append(result)
                         index += 1
-                    
+
     except pollster.rest.ApiException as e:
         print(e)
+        file.close()
 
+    file.close()
     return results
 
 
