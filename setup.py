@@ -15,6 +15,7 @@ setuptools.setup(
         "click",
         "tqdm",
         "pandas",
+        "geopandas",
         "requests",
         "matplotlib",
         "clickutil",
