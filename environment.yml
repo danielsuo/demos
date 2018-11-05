@@ -22,4 +22,7 @@ dependencies:
   - pip
   - pip:
     - clickutil
+    - pyshp
     - pollster
+    - shapely
+    - osr
