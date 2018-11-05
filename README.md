@@ -7,6 +7,9 @@ This library will be necessarily messy as we suss out what might make for good A
 - [Huffington Post Pollster](https://elections.huffingtonpost.com/pollster/api/v2)
 - [RealClearPolitics](https://www.realclearpolitics.com/epolls/latest_polls)
 - [Princeton University Elections and Voting Data Guide](https://libguides.princeton.edu/elections)
+- Cartographic boundaries
+  - https://www2.census.gov/geo/tiger/TIGER2018
+  - https://www2.census.gov/geo/tiger/GENZ2017/2017_file_name_def.pdf
 
 ## Code and methodology
 - [Princeton Election Consortium](http://election.princeton.edu)
