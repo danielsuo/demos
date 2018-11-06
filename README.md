@@ -17,3 +17,7 @@ This library will be necessarily messy as we suss out what might make for good A
     - [The Methods](http://election.princeton.edu/methods)
 - [538 replication](https://github.com/jseabold/538model)
 - [Blair](https://polistat.mbhs.edu/about/)
+
+## Software
+- [Leaflet.js](https://leafletjs.com)
+- [D3 + Leaflet](https://bost.ocks.org/mike/leaflet)
